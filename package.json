@@ -1,0 +1,26 @@
+{
+  "name": "xebia-presentations",
+  "version": "1.0.0",
+  "private": true,
+  "author": {"name": "jfellien"},
+  "slidev": {
+    "addons": [
+      "slidev-component-progress"
+    ]
+  },
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --format pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@xebia/slidev-addon-components-common": "^0.2.2",
+    "@xebia/slidev-theme-xebia": "^1.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-slidev": "^1.0.5"
+  }
+}

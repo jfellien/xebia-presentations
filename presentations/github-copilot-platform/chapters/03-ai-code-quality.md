@@ -1,17 +1,16 @@
 ---
 # 3. AI in Code Quality
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
 
 # 3. AI in Code Quality
 
 <!-- [55:00–56:00] Transition from individual productivity to team-level code quality: refactoring, consistency, and learning. Image prompt: "AI refactoring old messy code into clean, well-structured C# code, before/after panels". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Refactoring and consistency
 
@@ -47,8 +46,8 @@ public async Task<IActionResult> GetOrder(int id)
 <!-- [56:00–61:00] Explain how you’d use AI to propose refactorings and then review them like you would a junior colleague’s PR. Image prompt: "split C# code view showing cluttered method on the left and cleaner refactored version on the right, with AI sparkles bridging them". -->
 
 ---
-
 layout: default
+---
 
 ## Demo 3 – AI-driven refactoring
 

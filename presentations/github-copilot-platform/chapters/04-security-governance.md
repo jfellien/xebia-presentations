@@ -1,17 +1,16 @@
 ---
 # 4. AI for Security and Governance
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
 
 # 4. AI for Security and Governance
 
 <!-- [73:00–74:00] Transition into risk reduction and governance: Dependabot, code scanning, and policy-as-code enhanced by AI. Image prompt: "shield-shaped diagram overlaying a GitHub repo, AI signals scanning dependencies and code". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Security signals on GitHub
 
@@ -38,8 +37,8 @@ flowchart TD
 <!-- [74:00–80:00] Walk through how security features are already present, and AI can sit on top to explain, prioritize, and suggest fixes. Image prompt: "dashboard-style illustration of security alerts with AI-generated explanations next to them". -->
 
 ---
-
 layout: two-cols
+---
 
 ## AI-assisted security triage
 
@@ -70,8 +69,8 @@ public async Task<IActionResult> GetUser(string id)
 <!-- [80:00–88:00] Use a simple SQL injection example in C# and show how AI can both explain the vulnerability and help rewrite it. Image prompt: "code snippet with a red warning icon transforming into a green shield after AI fix". -->
 
 ---
-
 layout: default
+---
 
 ## Governance and guardrails
 

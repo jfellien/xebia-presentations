@@ -1,17 +1,17 @@
 ---
 # 1. Why AI on the GitHub Platform
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
+
 
 # 1. Why AI on the GitHub Platform
 
 <!-- [12:00–13:00] Use this dark, image-heavy section slide to transition into the first chapter. Image prompt: "wide shot of a software delivery pipeline visualized as a road lit by AI-powered signposts, GitHub logo subtly integrated, dark background with neon purple highlights". -->
 
 ---
-
 layout: two-cols
+---
 
 ## From code host to AI platform
 
@@ -39,8 +39,8 @@ flowchart LR
 <!-- [13:00–17:00] Explain that AI is being woven into each step, not a separate tool. Walk through the mermaid diagram and how AI participates in this loop. Image prompt: "diagram-like illustration of a circular DevOps loop enhanced with AI nodes, modern and minimal, purple and teal". -->
 
 ---
-
 layout: image-left
+---
 
 ## What problems are we solving?
 

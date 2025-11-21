@@ -1,17 +1,16 @@
 ---
 # 6. Extensibility: Actions, Apps, and Integrations with AI
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
 
 # 6. Extensibility: Actions, Apps, and Integrations with AI
 
 <!-- [109:00–110:00] Transition into how to extend GitHub with AI-powered workflows using Actions, apps, and external services. Image prompt: "workflow diagram with GitHub Actions icons and AI nodes". -->
 
 ---
-
 layout: two-cols
+---
 
 ## GitHub Actions with AI in the loop
 
@@ -45,8 +44,8 @@ jobs:
 <!-- [110:00–116:00] Show how AI can be invoked in CI via Actions, without hard-coding model details into your app. Image prompt: "YAML workflow diagram with an AI-branded step highlighted". -->
 
 ---
-
 layout: default
+---
 
 ## Apps and integrations
 

@@ -1,17 +1,16 @@
 ---
 # 5. AI for Project Management and Collaboration
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
 
 # 5. AI for Project Management and Collaboration
 
 <!-- [93:00–94:00] Shift focus from code to work tracking and collaboration: issues, projects, and documentation aided by AI. Image prompt: "Kanban board with tasks being auto-organized by an AI helper". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Smarter issues and discussions
 
@@ -39,8 +38,8 @@ sequenceDiagram
 <!-- [94:00–99:00] Explain how AI can take raw inputs (logs, screenshots, vague descriptions) and turn them into good issues. Image prompt: "AI assistant turning a messy notepad into a clean issue card on a kanban board". -->
 
 ---
-
 layout: image-right
+---
 
 ## GitHub Projects with AI
 
@@ -54,8 +53,8 @@ layout: image-right
 <!-- [99:00–104:00] Position AI as a helper for project leads: quickly get the "shape" of the work without manually reading every card. Image prompt: "project board view with AI-generated summary box floating above it". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Docs, READMEs, and wikis
 

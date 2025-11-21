@@ -1,17 +1,16 @@
 ---
 # 7. Best Practices, Limits, and Pitfalls
----
-
 layout: section
 class: 'bg-gradient-to-br from-purple-900 to-slate-900 text-white'
+---
 
 # 7. Best Practices, Limits, and Pitfalls
 
 <!-- [121:00–122:00] Prepare the audience for a realistic, balanced view: how to use AI responsibly and effectively. Image prompt: "two-path road sign: 'Boost' and 'Risk', with an AI advisor helping choose a safe path". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Using AI like a teammate
 
@@ -36,8 +35,8 @@ flowchart LR
 <!-- [122:00–127:00] Position AI as a teammate in an iterative loop, not a replacement for engineering judgment. Image prompt: "team of developers and an AI avatar around a whiteboard, all contributing equally". -->
 
 ---
-
 layout: image-right
+---
 
 ## Typical pitfalls
 
@@ -51,8 +50,8 @@ layout: image-right
 <!-- [127:00–131:00] Share war stories if you have them: subtle bugs, performance issues, or security problems introduced via AI suggestions. Image prompt: "warning sign over code with subtle glitch effects, representing hidden bugs". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Org-level practices
 

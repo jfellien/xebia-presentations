@@ -38,5 +38,56 @@ To edit content, update the corresponding chapter file.
 
 From AI-assisted coding to insights, security, and collaboration.
 
+---
+src: /chapters/00-intro.md
+---
+
+---
+src: /chapters/01-why-ai-on-github.md
+---
+
+---
+src: /chapters/02-copilot-individuals-teams.md
+---
+
+---
+src: /chapters/03-ai-code-quality.md
+---
+
+---
+src: /chapters/04-security-governance.md
+---
+
+---
+src: /chapters/05-project-management-collaboration.md
+---
+
+---
+src: /chapters/06-extensibility-actions-apps.md
+---
+
+---
+src: /chapters/07-best-practices-pitfalls.md
+---
+
+---
+src: /chapters/08-summary-qa.md
+---
+
+<!--
+Slides are maintained per agenda topic under `chapters/`:
+- 00-intro.md – intro, teaser, agenda, audience
+- 01-why-ai-on-github.md – why AI on the GitHub Platform
+- 02-copilot-individuals-teams.md – GitHub Copilot for individuals and teams
+- 03-ai-code-quality.md – AI in code quality
+- 04-security-governance.md – AI for security and governance
+- 05-project-management-collaboration.md – AI for project management and collaboration
+- 06-extensibility-actions-apps.md – extensibility with Actions, apps, and integrations
+- 07-best-practices-pitfalls.md – best practices, limits, and pitfalls
+- 08-summary-qa.md – summary, Q&A, and closing
+
+To edit content, update the corresponding chapter file.
+-->
+
 
 

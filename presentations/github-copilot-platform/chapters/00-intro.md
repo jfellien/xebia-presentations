@@ -9,8 +9,9 @@ From AI-assisted coding to insights, security, and collaboration.
 <!-- [00:00–03:00] Speaker notes: Briefly welcome the audience, set expectations for a 2-hour, demo-heavy session about how AI features across the GitHub platform (not just Copilot) can help individuals and teams. Image prompt: "vibrant illustration of a diverse software team using AI tools embedded in GitHub, dashboards and code on screens, modern office, purple accent lighting, clean flat style similar to /public/devcontainer.jpeg". -->
 
 ---
-
 layout: center
+---
+
 
 # Teaser
 
@@ -23,8 +24,8 @@ layout: center
 <!-- [03:00–06:00] Hook the audience by painting GitHub as more than a code host: it becomes an AI-augmented platform for the whole SDLC. Keep this short and energetic. Image prompt: "concept art of a glowing GitHub Octocat surrounded by AI data streams and repositories floating around, futuristic but clean, purple and blue color palette". -->
 
 ---
-
 layout: two-cols
+---
 
 ## Agenda
 
@@ -45,8 +46,8 @@ layout: two-cols
 <!-- [06:00–09:00] Walk through the agenda quickly. Emphasize that the talk is practical, includes several demos, and is relevant for developers, leads, and platform owners. Image prompt: "minimalist agenda screen on a laptop with GitHub UI in the background, purple accent lighting, modern flat illustration". -->
 
 ---
-
 layout: image-right
+---
 
 ## Who is this for?
 
