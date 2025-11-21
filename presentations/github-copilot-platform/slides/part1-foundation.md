@@ -58,6 +58,7 @@ layout: default
 3. **Issue Analysis** - Context understanding
 4. **Coding Agent** - Autonomous implementation
 5. **Workflow Integration** - CI/CD assistance
+6. **Spaces** - Light RAG System
 
 </div>
 
