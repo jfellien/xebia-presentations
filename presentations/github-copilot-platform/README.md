@@ -118,6 +118,30 @@ Edit `slides.md` to customize:
 - Add company-specific examples
 - Include your own screenshots
 
+### Trainer/Speaker Configuration
+
+The presentation includes a configurable trainer slide. To customize which trainer appears:
+
+1. **Using Environment Variable:**
+   ```bash
+   # Create .env file
+   echo "VITE_TRAINER_NAME=jane-smith" > .env
+   
+   # Or set inline
+   VITE_TRAINER_NAME=jane-smith npm run dev
+   ```
+
+2. **Add Your Own Trainer:**
+   - Create trainer profile: `../../common/trainers/your-name.json`
+   - Add profile picture: `../../img/trainers/your-name.jpg`
+   - See `../../common/trainers/README.md` for detailed instructions
+
+3. **Available Trainers:**
+   - `john-doe` (default)
+   - `jane-smith`
+
+For complete documentation on adding trainers, see [Trainer Configuration Guide](../../common/trainers/README.md).
+
 ### Branding
 
 Modify the frontmatter in `slides.md`:

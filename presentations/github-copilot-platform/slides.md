@@ -19,6 +19,10 @@ src: ./slides/intro.md
 ---
 
 ---
+src: ../../common/trainers/speaker.md
+---
+
+---
 src: ./slides/agenda.md
 ---
 

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trainer Profile",
+  "description": "Schema for trainer/speaker profile data used in presentations",
+  "type": "object",
+  "required": ["name", "position"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the trainer",
+      "examples": ["John Doe", "Jane Smith"]
+    },
+    "position": {
+      "type": "string",
+      "description": "Job title or role of the trainer",
+      "examples": ["Senior Software Engineer", "DevOps Trainer", "Cloud Architect"]
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short biography or description of the trainer (optional)",
+      "maxLength": 500
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email address (optional)"
+    },
+    "linkedin": {
+      "type": "string",
+      "format": "uri",
+      "description": "LinkedIn profile URL (optional)"
+    },
+    "github": {
+      "type": "string",
+      "description": "GitHub username (optional)"
+    },
+    "twitter": {
+      "type": "string",
+      "description": "Twitter/X handle (optional)"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company or organization name (optional)"
+    },
+    "image": {
+      "type": "string",
+      "description": "Filename of the trainer's profile picture (should exist in img/trainers/)",
+      "examples": ["john-doe.jpg", "jane-smith.png"]
+    }
+  }
+}

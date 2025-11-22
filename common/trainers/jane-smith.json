@@ -1,0 +1,10 @@
+{
+  "name": "Jane Smith",
+  "position": "DevOps Trainer & Cloud Architect",
+  "bio": "Helping teams adopt modern development practices and cloud-native technologies. Speaker and open-source contributor.",
+  "email": "jane.smith@example.com",
+  "github": "janesmith",
+  "linkedin": "https://www.linkedin.com/in/janesmith",
+  "company": "Xebia",
+  "image": "jane-smith.jpg"
+}
