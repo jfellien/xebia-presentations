@@ -10,6 +10,13 @@ echo "  Add New Trainer Profile"
 echo "============================================"
 echo ""
 
+# Check if jq is available
+if ! command -v jq &> /dev/null; then
+    echo "Error: jq is required but not installed."
+    echo "Please install jq: https://stedolan.github.io/jq/download/"
+    exit 1
+fi
+
 # Get trainer information
 read -p "Trainer's full name: " name
 read -p "Position/Title: " position
@@ -56,25 +63,30 @@ if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     exit 0
 fi
 
-# Create JSON file with proper formatting
+# Create JSON file using jq for proper escaping
 json_file="common/trainers/$filename.json"
 
-# Start building JSON content
-json_content="{\n  \"name\": \"$name\",\n  \"position\": \"$position\""
-
-# Add optional fields
-[ -n "$bio" ] && json_content+=",\n  \"bio\": \"$bio\""
-[ -n "$email" ] && json_content+=",\n  \"email\": \"$email\""
-[ -n "$github" ] && json_content+=",\n  \"github\": \"$github\""
-[ -n "$linkedin" ] && json_content+=",\n  \"linkedin\": \"$linkedin\""
-[ -n "$company" ] && json_content+=",\n  \"company\": \"$company\""
-[ -n "$image" ] && json_content+=",\n  \"image\": \"$image\""
-
-# Close JSON
-json_content+="\n}"
-
-# Write to file
-echo -e "$json_content" > "$json_file"
+# Build JSON object with jq (properly escapes all values)
+jq -n \
+  --arg name "$name" \
+  --arg position "$position" \
+  --arg bio "$bio" \
+  --arg email "$email" \
+  --arg github "$github" \
+  --arg linkedin "$linkedin" \
+  --arg company "$company" \
+  --arg image "$image" \
+  '{
+    name: $name,
+    position: $position
+  }
+  | if $bio != "" then . + {bio: $bio} else . end
+  | if $email != "" then . + {email: $email} else . end
+  | if $github != "" then . + {github: $github} else . end
+  | if $linkedin != "" then . + {linkedin: $linkedin} else . end
+  | if $company != "" then . + {company: $company} else . end
+  | if $image != "" then . + {image: $image} else . end
+  ' > "$json_file"
 
 echo ""
 echo "✅ Created $json_file"
