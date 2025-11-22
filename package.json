@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export --format pdf"
+    "export": "slidev export --format pdf",
+    "add-trainer": "bash scripts/add-trainer.sh"
   },
   "dependencies": {
     "@slidev/cli": "^0.48.0",

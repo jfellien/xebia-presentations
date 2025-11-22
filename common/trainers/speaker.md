@@ -5,46 +5,44 @@ class: trainer-slide
 
 <script setup>
 import { computed } from 'vue'
-import { useSlideContext } from '@slidev/client'
 
 // Read trainer name from environment variable or use default
 const trainerName = import.meta.env.VITE_TRAINER_NAME || import.meta.env.SLIDEV_TRAINER || 'john-doe'
 
+// Import all trainer JSON files using Vite's glob import
+// This automatically loads all JSON files from the trainers directory
+const trainerModules = import.meta.glob('./*.json', { eager: true })
+
 // Load trainer data
 const trainerData = computed(() => {
   try {
-    // Try to load the trainer JSON file dynamically
-    // Note: In production, you would import this statically or load via fetch
-    // For now, we'll use a fallback approach with known trainers
-    const trainers = {
-      'john-doe': {
-        name: 'John Doe',
-        position: 'Senior Software Engineer',
-        bio: 'Passionate about developer productivity and AI-assisted development. 10+ years of experience in software engineering and DevOps.',
-        email: 'john.doe@example.com',
-        github: 'johndoe',
-        company: 'Xebia',
-        image: 'john-doe.svg'
-      },
-      'jane-smith': {
-        name: 'Jane Smith',
-        position: 'DevOps Trainer & Cloud Architect',
-        bio: 'Helping teams adopt modern development practices and cloud-native technologies. Speaker and open-source contributor.',
-        email: 'jane.smith@example.com',
-        github: 'janesmith',
-        linkedin: 'https://www.linkedin.com/in/janesmith',
-        company: 'Xebia',
-        image: 'jane-smith.svg'
+    // Build a map of trainer data from imported modules
+    const trainers = {}
+    Object.entries(trainerModules).forEach(([path, module]) => {
+      // Extract filename without path and extension (e.g., './john-doe.json' -> 'john-doe')
+      const filename = path.replace('./', '').replace('.json', '')
+      // Skip the schema file
+      if (filename !== 'trainer-schema') {
+        trainers[filename] = module.default || module
       }
-    }
+    })
     
-    return trainers[trainerName] || trainers['john-doe']
-  } catch (e) {
-    console.error('Error loading trainer data:', e)
-    return {
+    // Return the selected trainer or fall back to john-doe
+    return trainers[trainerName] || trainers['john-doe'] || {
       name: 'Speaker Name',
       position: 'Position',
-      bio: '',
+      bio: 'Please configure a trainer using VITE_TRAINER_NAME environment variable.',
+      image: 'john-doe.svg'
+    }
+  } catch (e) {
+    console.error('Error loading trainer data:', e)
+    // Fallback trainer data
+    return {
+      name: 'John Doe',
+      position: 'Senior Software Engineer',
+      bio: 'Passionate about developer productivity and AI-assisted development.',
+      github: 'johndoe',
+      company: 'Xebia',
       image: 'john-doe.svg'
     }
   }

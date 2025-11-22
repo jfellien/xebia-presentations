@@ -77,7 +77,19 @@ VITE_TRAINER_NAME=jane-smith npm run export
 
 ## Adding a New Trainer
 
-### Step 1: Create Trainer Data File
+### Quick Method: Using the Helper Script
+
+The easiest way to add a new trainer is using the interactive helper script:
+
+```bash
+./scripts/add-trainer.sh
+```
+
+The script will prompt you for trainer information and automatically create the JSON file. You'll still need to add the profile picture manually.
+
+### Manual Method
+
+#### Step 1: Create Trainer Data File
 
 Create a new JSON file in `common/trainers/` named after the trainer (use kebab-case):
 
@@ -97,7 +109,7 @@ Create a new JSON file in `common/trainers/` named after the trainer (use kebab-
 }
 ```
 
-### Step 2: Add Trainer Profile Picture
+#### Step 2: Add Trainer Profile Picture
 
 Add the trainer's profile picture to `img/trainers/`:
 
@@ -110,25 +122,11 @@ Add the trainer's profile picture to `img/trainers/`:
 - JSON file: `common/trainers/alex-johnson.json`
 - Image file: `img/trainers/alex-johnson.jpg`
 
-### Step 3: Update speaker.md (if needed)
+#### Step 3: Test the Configuration
 
-If you want the new trainer to be available in the hardcoded fallback list, edit `common/trainers/speaker.md` and add the trainer to the `trainers` object:
+No additional setup needed! The trainer slide automatically discovers all JSON files in `common/trainers/` using Vite's glob import feature.
 
-```javascript
-const trainers = {
-  'john-doe': { /* ... */ },
-  'jane-smith': { /* ... */ },
-  'alex-johnson': {
-    name: 'Alex Johnson',
-    position: 'Cloud Solutions Architect',
-    // ... rest of the data
-  }
-}
-```
-
-**Note:** This step is optional if you're loading trainer data dynamically via fetch or import.
-
-### Step 4: Test the Configuration
+#### Step 3: Test the Configuration
 
 ```bash
 VITE_TRAINER_NAME=alex-johnson npm run dev
