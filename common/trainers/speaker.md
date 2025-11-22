@@ -84,15 +84,17 @@ const imagePath = computed(() => `/img/trainers/${trainerData.value.image}`)
        :href="`https://github.com/${trainerData.github}`" 
        target="_blank"
        rel="noopener noreferrer"
+       aria-label="GitHub profile"
        class="text-blue-600 dark:text-blue-400 hover:underline">
-      🔗 @{{ trainerData.github }}
+      GitHub: @{{ trainerData.github }}
     </a>
     <a v-if="trainerData.linkedin" 
        :href="trainerData.linkedin" 
        target="_blank"
        rel="noopener noreferrer"
+       aria-label="LinkedIn profile"
        class="text-blue-600 dark:text-blue-400 hover:underline">
-      💼 LinkedIn
+      LinkedIn Profile
     </a>
   </div>
 </div>
