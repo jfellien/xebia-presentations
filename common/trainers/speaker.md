@@ -84,7 +84,7 @@ const imagePath = computed(() => `/img/trainers/${trainerData.value.image}`)
        :href="`https://github.com/${trainerData.github}`" 
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="GitHub profile"
+       :aria-label="`GitHub profile for ${trainerData.name}`"
        class="text-blue-600 dark:text-blue-400 hover:underline">
       GitHub: @{{ trainerData.github }}
     </a>
@@ -92,7 +92,7 @@ const imagePath = computed(() => `/img/trainers/${trainerData.value.image}`)
        :href="trainerData.linkedin" 
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="LinkedIn profile"
+       :aria-label="`LinkedIn profile for ${trainerData.name}`"
        class="text-blue-600 dark:text-blue-400 hover:underline">
       LinkedIn Profile
     </a>
