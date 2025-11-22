@@ -24,8 +24,14 @@ read -p "Short bio (optional): " bio
 read -p "Email (optional): " email
 read -p "GitHub username (optional): " github
 read -p "LinkedIn URL (optional): " linkedin
-read -p "Company (default: Xebia): " company
-company=${company:-Xebia}
+read -p "Company (optional, default: Xebia): " company
+# Set default only if user pressed enter without input
+if [ -z "$company" ]; then
+    company="Xebia"
+    company_provided="default"
+else
+    company_provided="yes"
+fi
 
 # Generate filename from name (convert to kebab-case)
 filename=$(echo "$name" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed 's/[^a-z0-9-]//g')
@@ -49,7 +55,11 @@ echo "Bio:      $bio"
 echo "Email:    $email"
 echo "GitHub:   $github"
 echo "LinkedIn: $linkedin"
-echo "Company:  $company"
+if [ "$company_provided" = "default" ]; then
+    echo "Company:  $company (default)"
+else
+    echo "Company:  $company"
+fi
 echo "Image:    $image"
 echo ""
 echo "Files to create:"

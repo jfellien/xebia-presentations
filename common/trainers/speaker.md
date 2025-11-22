@@ -13,6 +13,8 @@ const trainerName = import.meta.env.VITE_TRAINER_NAME || import.meta.env.SLIDEV_
 
 // Import all trainer JSON files using Vite's glob import
 // This automatically loads all JSON files from the trainers directory
+// NOTE: Trainer data comes from controlled JSON files in the repository.
+// If exposing to untrusted sources, validate github usernames match pattern: /^[a-zA-Z0-9-]+$/
 const trainerModules = import.meta.glob('./*.json', { eager: true })
 
 // Load trainer data
@@ -57,7 +59,7 @@ const imagePath = computed(() => `/img/trainers/${trainerData.value.image}`)
 <div class="flex flex-col items-center justify-center h-full pr-8">
   <img 
     :src="imagePath" 
-    :alt="trainerData.name"
+    :alt="`Profile picture of ${trainerData.name}`"
     class="w-64 h-64 rounded-full object-cover shadow-2xl border-4 border-white"
   />
 </div>
