@@ -7,6 +7,8 @@ class: trainer-slide
 import { computed } from 'vue'
 
 // Read trainer name from environment variable or use default
+// VITE_TRAINER_NAME is the primary variable (Vite convention)
+// SLIDEV_TRAINER is provided as a fallback for convenience
 const trainerName = import.meta.env.VITE_TRAINER_NAME || import.meta.env.SLIDEV_TRAINER || 'john-doe'
 
 // Import all trainer JSON files using Vite's glob import
@@ -19,8 +21,9 @@ const trainerData = computed(() => {
     // Build a map of trainer data from imported modules
     const trainers = {}
     Object.entries(trainerModules).forEach(([path, module]) => {
-      // Extract filename without path and extension (e.g., './john-doe.json' -> 'john-doe')
-      const filename = path.replace('./', '').replace('.json', '')
+      // Extract filename without path and extension
+      // e.g., './john-doe.json' -> 'john-doe'
+      const filename = path.split('/').pop().replace(/\.json$/, '')
       // Skip the schema file
       if (filename !== 'trainer-schema') {
         trainers[filename] = module.default || module

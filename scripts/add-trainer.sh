@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Script to help create a new trainer profile
 # Usage: ./scripts/add-trainer.sh
