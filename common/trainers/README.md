@@ -124,9 +124,9 @@ Add the trainer's profile picture to `img/trainers/`:
 
 #### Step 3: Test the Configuration
 
-No additional setup needed! The trainer slide automatically discovers all JSON files in `common/trainers/` using Vite's glob import feature.
+The trainer slide automatically discovers all JSON files in `common/trainers/` using Vite's glob import feature. No additional setup needed!
 
-#### Step 3: Test the Configuration
+Test your new trainer:
 
 ```bash
 VITE_TRAINER_NAME=alex-johnson npm run dev
