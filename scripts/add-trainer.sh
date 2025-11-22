@@ -56,40 +56,25 @@ if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     exit 0
 fi
 
-# Create JSON file
+# Create JSON file with proper formatting
 json_file="common/trainers/$filename.json"
-cat > "$json_file" <<JSONEOF
-{
-  "name": "$name",
-  "position": "$position"
-JSONEOF
+
+# Start building JSON content
+json_content="{\n  \"name\": \"$name\",\n  \"position\": \"$position\""
 
 # Add optional fields
-if [ -n "$bio" ]; then
-    echo "  ,\"bio\": \"$bio\"" >> "$json_file"
-fi
+[ -n "$bio" ] && json_content+=",\n  \"bio\": \"$bio\""
+[ -n "$email" ] && json_content+=",\n  \"email\": \"$email\""
+[ -n "$github" ] && json_content+=",\n  \"github\": \"$github\""
+[ -n "$linkedin" ] && json_content+=",\n  \"linkedin\": \"$linkedin\""
+[ -n "$company" ] && json_content+=",\n  \"company\": \"$company\""
+[ -n "$image" ] && json_content+=",\n  \"image\": \"$image\""
 
-if [ -n "$email" ]; then
-    echo "  ,\"email\": \"$email\"" >> "$json_file"
-fi
+# Close JSON
+json_content+="\n}"
 
-if [ -n "$github" ]; then
-    echo "  ,\"github\": \"$github\"" >> "$json_file"
-fi
-
-if [ -n "$linkedin" ]; then
-    echo "  ,\"linkedin\": \"$linkedin\"" >> "$json_file"
-fi
-
-if [ -n "$company" ]; then
-    echo "  ,\"company\": \"$company\"" >> "$json_file"
-fi
-
-if [ -n "$image" ]; then
-    echo "  ,\"image\": \"$image\"" >> "$json_file"
-fi
-
-echo "}" >> "$json_file"
+# Write to file
+echo -e "$json_content" > "$json_file"
 
 echo ""
 echo "✅ Created $json_file"
